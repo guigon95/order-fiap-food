@@ -21,7 +21,7 @@ public class OrderResponse {
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
 
-    private UUID client;
+    private String client;
 
     private UUID paymentResponse;
 

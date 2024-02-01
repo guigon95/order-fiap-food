@@ -23,7 +23,7 @@ public class Order {
 
     private OrderStatus orderStatus;
 
-    private UUID client;
+    private String client;
 
     private LocalDateTime createdAt;
 }
