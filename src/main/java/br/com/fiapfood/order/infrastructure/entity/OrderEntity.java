@@ -27,7 +27,7 @@ public class OrderEntity {
     private OrderStatus orderStatus;
 
     @Column(name = "client_id")
-    private UUID client;
+    private String client;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
