@@ -169,6 +169,21 @@ class ProductGatewayImplTest {
 
     @Test
     void findAllByCategoryAndStatus() {
+
+        ProductEntity productEntity = getProductEntity(UUID.randomUUID());
+        ProductEntity productEntity2 = getProductEntity(UUID.randomUUID());
+        productEntity2.setName("Product 2");
+        productEntity2.setPrice(new BigDecimal("200.00"));
+
+        when(productRepository.findAllByCategoryAndStatus(any(Category.class), any(Status.class))).thenReturn(Arrays.asList(productEntity, productEntity2));
+
+        List<Product> allByCategory = productGateway.findAllByCategoryAndStatus(Category.DRINK, Status.ACTIVE);
+
+        verify(productRepository, times(1)).findAllByCategoryAndStatus(any(Category.class), any(Status.class));
+
+        assertThat(allByCategory).isNotNull().hasSize(2).containsExactlyInAnyOrder(productMapper.productEntityToProduct(productEntity), productMapper.productEntityToProduct(productEntity2));
+
+
     }
 
     @Test
