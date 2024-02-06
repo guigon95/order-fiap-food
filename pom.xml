@@ -91,20 +91,7 @@
 						</goals>
 					</execution>
 					<execution>
-						<id>generate-code-coverage-report</id>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-						<configuration>
-							<formats>
-								<format>XML</format>
-							</formats>
-						</configuration>
-					</execution>
-					<execution>
-						<id>jacoco-site</id>
-						<phase>package</phase>
+						<id>report</id>
 						<goals>
 							<goal>report</goal>
 						</goals>
