@@ -1,8 +1,8 @@
-package br.com.fiapfood.order.infrastructure.repository.jpa;
+package br.com.fiapfood.order.external.infrastructure.repository.jpa;
 
 import br.com.fiapfood.order.domain.enums.Category;
 import br.com.fiapfood.order.domain.enums.Status;
-import br.com.fiapfood.order.infrastructure.entity.ProductEntity;
+import br.com.fiapfood.order.external.infrastructure.entity.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

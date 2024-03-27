@@ -12,4 +12,6 @@ public interface OrderUseCase {
     Order createOrder(Order order);
 
     Order updateOrder(Order order);
+
+    void orderConsumerQueue();
 }

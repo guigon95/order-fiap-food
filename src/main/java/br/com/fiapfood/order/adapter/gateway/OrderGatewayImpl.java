@@ -5,7 +5,7 @@ import br.com.fiapfood.order.domain.model.ItemOrder;
 import br.com.fiapfood.order.domain.model.Order;
 import br.com.fiapfood.order.external.gateway.ItemOrderGateway;
 import br.com.fiapfood.order.external.gateway.OrderGateway;
-import br.com.fiapfood.order.infrastructure.repository.jpa.OrderRepository;
+import br.com.fiapfood.order.external.infrastructure.repository.jpa.OrderRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -19,7 +19,6 @@ public class OrderGatewayImpl implements OrderGateway {
 
     private final OrderRepository orderRepository;
     private final ItemOrderGateway itemOrderGateway;
-
 
     private final OrderMapper orderMapper;
     @Override
@@ -64,6 +63,14 @@ public class OrderGatewayImpl implements OrderGateway {
         order.setOrderStatus(saved.getOrderStatus());
         order.setClient(order.getClient());
         addItemOrder(order.getItemOrder(), order);
+
+        return order;
+    }
+
+    @Override
+    public Order updateStatus(Order order) {
+
+        orderRepository.updateStatus(order.getOrderStatus(), order.getId());
 
         return order;
     }
