@@ -1,5 +1,6 @@
 package br.com.fiapfood.order.adapter.mapper;
 
+import br.com.fiapfood.order.adapter.dto.messaging.OrderMessageDto;
 import br.com.fiapfood.order.adapter.dto.request.ItemOrderRequest;
 import br.com.fiapfood.order.adapter.dto.request.OrderRequest;
 import br.com.fiapfood.order.adapter.dto.response.OrderResponse;
@@ -7,7 +8,7 @@ import br.com.fiapfood.order.domain.model.ItemOrder;
 import br.com.fiapfood.order.domain.model.Order;
 import br.com.fiapfood.order.domain.model.Product;
 import br.com.fiapfood.order.domain.usecase.ProductUseCase;
-import br.com.fiapfood.order.infrastructure.entity.OrderEntity;
+import br.com.fiapfood.order.external.infrastructure.entity.OrderEntity;
 import org.mapstruct.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -45,4 +46,6 @@ public abstract class OrderMapper {
     public abstract void updateOrderEntityFromOrder(Order order, @MappingTarget OrderEntity orderEntity);
 
     public abstract OrderResponse orderToOrderResponse(Order order);
+
+    public abstract OrderMessageDto orderToOrderMessageDto(Order order);
 }

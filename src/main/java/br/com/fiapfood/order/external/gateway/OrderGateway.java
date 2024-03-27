@@ -12,4 +12,6 @@ public interface OrderGateway {
 
     Order save(Order order);
     Order update(Order order);
+
+    Order updateStatus(Order order);
 }

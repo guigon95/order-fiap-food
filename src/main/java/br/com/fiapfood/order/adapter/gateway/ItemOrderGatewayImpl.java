@@ -3,8 +3,8 @@ package br.com.fiapfood.order.adapter.gateway;
 import br.com.fiapfood.order.adapter.mapper.ItemOrderMapper;
 import br.com.fiapfood.order.domain.model.ItemOrder;
 import br.com.fiapfood.order.external.gateway.ItemOrderGateway;
-import br.com.fiapfood.order.infrastructure.entity.ItemOrderEntity;
-import br.com.fiapfood.order.infrastructure.repository.jpa.ItemOrderRepository;
+import br.com.fiapfood.order.external.infrastructure.entity.ItemOrderEntity;
+import br.com.fiapfood.order.external.infrastructure.repository.jpa.ItemOrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

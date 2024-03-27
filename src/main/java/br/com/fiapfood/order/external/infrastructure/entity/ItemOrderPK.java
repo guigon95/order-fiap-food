@@ -1,4 +1,4 @@
-package br.com.fiapfood.order.infrastructure.entity;
+package br.com.fiapfood.order.external.infrastructure.entity;
 
 import jakarta.persistence.Embeddable;
 import lombok.Data;

@@ -26,4 +26,17 @@ public class Order {
     private String client;
 
     private LocalDateTime createdAt;
+
+    public void nextStatus(){
+        if(OrderStatus.RECEIVED.equals(this.orderStatus)){
+            this.orderStatus = OrderStatus.IN_PROGRESS;
+        }
+        else if (OrderStatus.IN_PROGRESS.equals(this.orderStatus)){
+            this.orderStatus = OrderStatus.READY;
+        }
+        else if (OrderStatus.READY.equals(this.orderStatus)){
+            this.orderStatus = OrderStatus.FINISHED;
+        }
+
+    }
 }

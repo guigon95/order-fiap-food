@@ -1,6 +1,6 @@
-package br.com.fiapfood.order.infrastructure.repository.jpa;
+package br.com.fiapfood.order.external.infrastructure.repository.jpa;
 
-import br.com.fiapfood.order.infrastructure.entity.ItemOrderEntity;
+import br.com.fiapfood.order.external.infrastructure.entity.ItemOrderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

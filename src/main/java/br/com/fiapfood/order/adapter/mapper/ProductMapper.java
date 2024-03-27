@@ -3,7 +3,7 @@ package br.com.fiapfood.order.adapter.mapper;
 import br.com.fiapfood.order.adapter.dto.request.ProductRequest;
 import br.com.fiapfood.order.adapter.dto.response.ProductResponse;
 import br.com.fiapfood.order.domain.model.Product;
-import br.com.fiapfood.order.infrastructure.entity.ProductEntity;
+import br.com.fiapfood.order.external.infrastructure.entity.ProductEntity;
 import org.mapstruct.*;
 
 import java.util.List;

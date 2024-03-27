@@ -5,7 +5,7 @@ import br.com.fiapfood.order.adapter.dto.response.ItemOrderResponse;
 import br.com.fiapfood.order.domain.model.ItemOrder;
 import br.com.fiapfood.order.domain.model.Product;
 import br.com.fiapfood.order.domain.usecase.ProductUseCase;
-import br.com.fiapfood.order.infrastructure.entity.ItemOrderEntity;
+import br.com.fiapfood.order.external.infrastructure.entity.ItemOrderEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;

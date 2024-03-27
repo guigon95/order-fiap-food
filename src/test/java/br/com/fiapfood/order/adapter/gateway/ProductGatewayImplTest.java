@@ -5,7 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -15,24 +14,20 @@ import br.com.fiapfood.order.domain.enums.Category;
 import br.com.fiapfood.order.domain.enums.Status;
 import br.com.fiapfood.order.domain.model.Product;
 import br.com.fiapfood.order.external.gateway.ProductGateway;
-import br.com.fiapfood.order.infrastructure.entity.ItemOrderEntity;
-import br.com.fiapfood.order.infrastructure.entity.ProductEntity;
-import br.com.fiapfood.order.infrastructure.repository.jpa.ProductRepository;
+import br.com.fiapfood.order.external.infrastructure.entity.ProductEntity;
+import br.com.fiapfood.order.external.infrastructure.repository.jpa.ProductRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ProductGatewayImplTest {
 
