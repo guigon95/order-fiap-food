@@ -5,8 +5,8 @@ import br.com.fiapfood.order.domain.enums.Category;
 import br.com.fiapfood.order.domain.enums.Status;
 import br.com.fiapfood.order.domain.model.Product;
 import br.com.fiapfood.order.external.gateway.ProductGateway;
-import br.com.fiapfood.order.infrastructure.entity.ProductEntity;
-import br.com.fiapfood.order.infrastructure.repository.jpa.ProductRepository;
+import br.com.fiapfood.order.external.infrastructure.entity.ProductEntity;
+import br.com.fiapfood.order.external.infrastructure.repository.jpa.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

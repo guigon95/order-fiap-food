@@ -1,4 +1,4 @@
-package br.com.fiapfood.order.infrastructure.entity;
+package br.com.fiapfood.order.external.infrastructure.entity;
 
 import br.com.fiapfood.order.domain.enums.OrderStatus;
 import jakarta.persistence.*;
@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
@@ -20,7 +19,7 @@ public class OrderEntity {
     @Column(name = "id", nullable = false, columnDefinition = "BIGINT")
     private Long id;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "order")
     private List<ItemOrderEntity> itemOrder;
 
     @Enumerated(EnumType.STRING)

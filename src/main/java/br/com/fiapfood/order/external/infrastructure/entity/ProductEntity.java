@@ -1,4 +1,4 @@
-package br.com.fiapfood.order.infrastructure.entity;
+package br.com.fiapfood.order.external.infrastructure.entity;
 
 import br.com.fiapfood.order.domain.enums.Category;
 import br.com.fiapfood.order.domain.enums.Status;
