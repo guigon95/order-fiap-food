@@ -105,18 +105,6 @@
 							<goal>report</goal>
 						</goals>
 					</execution>
-					<execution>
-						<id>jacoco-site</id>
-						<phase>package</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-						<configuration>
-							<formats>
-								<format>XML</format>
-							</formats>
-						</configuration>
-					</execution>
 				</executions>
 			</plugin>
 		</plugins>
