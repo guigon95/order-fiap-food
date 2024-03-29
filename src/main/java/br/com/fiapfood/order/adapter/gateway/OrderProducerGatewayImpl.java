@@ -4,7 +4,7 @@ import br.com.fiapfood.order.adapter.mapper.OrderMapper;
 import br.com.fiapfood.order.domain.model.Order;
 import br.com.fiapfood.order.external.gateway.OrderProducerGateway;
 import br.com.fiapfood.order.adapter.dto.messaging.OrderMessageDto;
-import br.com.fiapfood.order.external.infrastructure.messaging.OrderProducer;
+import br.com.fiapfood.order.external.infrastructure.messaging.ProductionProducer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderProducerGatewayImpl implements OrderProducerGateway {
 
-    private final OrderProducer orderProducer;
+    private final ProductionProducer productionProducer;
 
     private final OrderMapper orderMapper;
 
@@ -22,6 +22,6 @@ public class OrderProducerGatewayImpl implements OrderProducerGateway {
     @Override
     public void publishMessage(Order order) {
         OrderMessageDto orderMessageDto = orderMapper.orderToOrderMessageDto(order);
-        orderProducer.publishMessage(orderMessageDto);
+        productionProducer.publishMessage(orderMessageDto);
     }
 }

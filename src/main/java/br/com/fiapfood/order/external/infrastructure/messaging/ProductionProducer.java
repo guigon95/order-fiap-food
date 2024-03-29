@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 @RequiredArgsConstructor
-public class OrderProducer {
+public class ProductionProducer {
 
     @Value("${aws.productionQueueName}")
     private String queueName;
