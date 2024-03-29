@@ -15,10 +15,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SQSConfig {
 
-    @Value("${aws.access.key}")
+    @Value("${aws.key}")
     private String accessKey;
 
-    @Value("${aws.secret.key}")
+    @Value("${aws.key}")
     private String secretKey;
 
     @Bean
@@ -26,7 +26,7 @@ public class SQSConfig {
         BasicAWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
         return AmazonSQSClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
-                .withRegion(Regions.US_EAST_1)
+                .withRegion(Regions.US_EAST_2)
                 .build();
     }
 
