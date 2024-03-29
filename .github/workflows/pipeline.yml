@@ -13,7 +13,7 @@ on:
   
 env:
   ECS_CLUSTER: ${{ secrets.APP_NAME }}-cluster
-  ECR_REPOSITORY: order-fiap-food
+  ECR_REPOSITORY: ${{ secrets.APP_NAME }}
 
 jobs:
 
