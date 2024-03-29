@@ -15,10 +15,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SQSConfig {
 
-    @Value("${aws.key}")
+    @Value("${aws.access.key}")
     private String accessKey;
 
-    @Value("${aws.secret}")
+    @Value("${aws.secret.key}")
     private String secretKey;
 
     @Bean
