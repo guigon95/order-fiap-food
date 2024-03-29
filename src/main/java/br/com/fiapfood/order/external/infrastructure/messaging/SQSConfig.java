@@ -18,7 +18,7 @@ public class SQSConfig {
     @Value("${aws.key}")
     private String accessKey;
 
-    @Value("${aws.key}")
+    @Value("${aws.secret}")
     private String secretKey;
 
     @Bean
