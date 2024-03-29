@@ -1,6 +1,7 @@
 package br.com.fiapfood.order.adapter.gateway;
 
 import br.com.fiapfood.order.adapter.mapper.OrderMapper;
+import br.com.fiapfood.order.domain.enums.OrderStatus;
 import br.com.fiapfood.order.domain.model.ItemOrder;
 import br.com.fiapfood.order.domain.model.Order;
 import br.com.fiapfood.order.external.gateway.ItemOrderGateway;
@@ -10,6 +11,7 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +39,8 @@ public class OrderGatewayImpl implements OrderGateway {
     @Transactional
     public Order save(Order order) {
         var orderEntity = orderMapper.orderToOrderEntity(order);
+        orderEntity.setOrderStatus(OrderStatus.RECEIVED);
+        orderEntity.setCreatedAt(LocalDateTime.now());
         Order orderSaved = orderMapper.orderEntityToOrder(orderRepository.save(orderEntity));
         addItemOrder(order.getItemOrder(), orderSaved);
         return orderSaved;
