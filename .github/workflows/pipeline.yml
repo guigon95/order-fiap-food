@@ -9,8 +9,8 @@
 name: Order Fiap Food EKS pipeline
 
 on:
-  push:
-
+  workflow_dispatch:
+  
 env:
   ECS_CLUSTER: fiap-food-cluster
   ECR_REPOSITORY: order-fiap-food
