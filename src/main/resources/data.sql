@@ -54,10 +54,13 @@ VALUES (5.99, random_uuid(), 'DRINK', 'Refrigerante de limao', '', 'Soda', 'ACTI
 
 ------------------------------ Orders ----------------------------------
 INSERT INTO ORDER_ENTITY (created_at, id, client_id, order_status) values
-    ( CURRENT_TIMESTAMP(), 1, 100, 'RECEIVED');
+    ( CURRENT_TIMESTAMP(), 1000, 100, 'RECEIVED');
 
 INSERT INTO ORDER_ENTITY (created_at, id, client_id, order_status) values
-    ( CURRENT_TIMESTAMP(), 2, 100, 'RECEIVED');
+    ( CURRENT_TIMESTAMP(), 1001, 100, 'RECEIVED');
 
 INSERT INTO ITEM_ORDER_ENTITY (quantity, order_id, product_id)
-VALUES (2, 1, '52d5f43a-849e-4dd1-a36c-f199658f2475')
+VALUES (2, 1000, '52d5f43a-849e-4dd1-a36c-f199658f2475');
+
+INSERT INTO ITEM_ORDER_ENTITY (quantity, order_id, product_id)
+VALUES (4, 1001, '52d5f43a-849e-4dd1-a36c-f199658f2475');

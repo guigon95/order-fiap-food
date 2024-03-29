@@ -26,4 +26,8 @@ public class OrderResponse {
     private UUID paymentResponse;
 
     private LocalDateTime createdAt;
+
+    public String getCreatedAt() {
+        return createdAt.toString();
+    }
 }
