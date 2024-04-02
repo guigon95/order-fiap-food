@@ -33,4 +33,6 @@ Por essas razões, o padrão Saga Coreografado foi a nossa escolha para o Sistem
 ```
 
 
-## Arquitetura
+## Arquitetura:
+
+![Arquitetura.png](images%2FArquitetura.png)
